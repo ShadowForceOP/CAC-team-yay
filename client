@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="timer.css"/>
+    
+    <title>Live Chat</title>
+  </head>
+  <body>   
+    <button onclick="window.location.href='index.html';">Back
+    </button>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <div id="prompt">
+      <div id="name-info">
+        Your name:<br/>
+        <input id="name"/>
+        <button onclick="rename()">OK</button>
+      </div>
+    </div>
+    <div id="main-container">
+      <div id="main-label">
+        <h1 class="label">Chats</h1>
+      </div> 
+      <div id="app"></div>
+      <button <button onclick="RestartTimer()">Restart</button>
+    </button>
+      <div id="main-content">
+        <div id="main-spinner" class="spinner"></div>
+        <div id="chats">
+          
+        </div>
+        <div id="controls">
+          <input id="message" placeholder="Type a message..."/>
+          <button id="send" onclick="send()">Send      </button>
+
+        </div>
+        <div id="who-container">
+          <p id="who-label">Who's online</p>
+          <div id="who-content">
+            <div id="who"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="reply-tooltip" class="tooltip">Reply</div>
+    <div id="copy-tooltip" class="tooltip">Copy</div>
+    <script src="main.js"></script>
+    <!-- <script src="timer.js"></script> -->
+  </body>
+</html>
